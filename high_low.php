@@ -14,47 +14,35 @@
 // if user's guess is more than the number, it outputs "LOWER"
 // if a user guesses the number, the game should declare "GOOD GUESS!"
 
+if ($argc == 3) {
+    $min = $argv[1];
+    $max = $argv[2];
 
+    $answer = rand($min, $max);
+} else {
+    $answer = rand(1,100);
+}
 
-	if ($argc == 3) {
-		$min = $argv[1];
-		$max = $argv[2];
+$number_of_guesses = 0;
 
-		$answer = rand($min, $max);
-	}
+fwrite (STDOUT, "Welcome to the HIGHER OR LOWER game.".PHP_EOL);
 
-	else ($answer = rand(1,100));
+do {
+    fwrite (STDOUT, "Guess a number.  ");
 
-	$number_of_guesses = 0;
+    $guess = trim(fgets(STDIN));
 
-	fwrite (STDOUT, "Welcome to the HIGHER OR LOWER game.".PHP_EOL);
+    $number_of_guesses++;
 
-	do{
-		fwrite (STDOUT, "Guess a number.  ");
+    if ($guess== $answer) {
+        fwrite (STDOUT, "GOOD GUESS! HIP HIP HOORAY!!!! Rock on.".PHP_EOL);
+    } elseif ($guess > $answer) {
+        fwrite(STDOUT, "$guess is too HIGH. guess again.  ".PHP_EOL);
+    } else {
+        fwrite (STDOUT, "$guess is too LOW. guess again  ".PHP_EOL);
+    }
+} while ($guess != $answer);
 
-		$guess = trim(fgets(STDIN));
+usleep (500000);
 
-		$number_of_guesses++;
-
-			if($guess== $answer){
-			fwrite (STDOUT, "GOOD GUESS! HIP HIP HOORAY!!!! Rock on.".PHP_EOL);
-			}
-	
-			elseif ($guess > $answer){
-			fwrite(STDOUT, "$guess is too HIGH. guess again.  ".PHP_EOL);
-			}
-
-			else{
-			fwrite (STDOUT, "$guess is too LOW. guess again  ".PHP_EOL);
-			}
-	}
-	while ($guess != $answer);
-
-	usleep (500000);
-
-	fwrite(STDOUT, "It took you $number_of_guesses guesses to figure it out.  ".PHP_EOL);
-			
-	
-
-
-	?>
+fwrite(STDOUT, "It took you $number_of_guesses guesses to figure it out.  ".PHP_EOL);
