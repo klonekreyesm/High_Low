@@ -1,13 +1,12 @@
 # High Low Game
 
-Some things this should demonstrate:
+Built a game using the CLI: 
 
-- Item 1
-- Item 2
-- Item 3
+- game picks a random number between 1 and 100
+- propmts user to guess the number
+- if users guess is less than the number, it ouputs "HIGHER"
+- if users guess is more than the number, it outputs "LOWER"
+- if user guesses the number, the game should declare "GOOD GUESS!"
 
-Here are my Steps:
 
-1. First Step
-1. Second Step
-1. Third Step
+####Game declares "GOOD GUESS! HIP HIP HOORAY!!!! Rock on.!" -- when number is guessed correctly. 
