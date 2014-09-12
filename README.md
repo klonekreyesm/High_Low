@@ -1,4 +1,4 @@
-# High Low Game
+#High Low Game
 
 Built a game using the CLI: 
 
@@ -8,5 +8,4 @@ Built a game using the CLI:
 - if users guess is more than the number, it outputs "LOWER"
 - if user guesses the number, the game should declare "GOOD GUESS!"
 
-
-####Game declares "GOOD GUESS! HIP HIP HOORAY!!!! Rock on.!" -- when number is guessed correctly. 
+Game declares "GOOD GUESS! HIP HIP HOORAY!!!! Rock on.!" -- when number is guessed correctly. 
